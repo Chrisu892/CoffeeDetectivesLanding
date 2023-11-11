@@ -21,5 +21,10 @@
       border-color: $clr-white;
       color: $clr-primary;
     }
+
+    &--alt {
+      border-color: $clr-white;
+      color: $clr-white;
+    }
   }
 </style>

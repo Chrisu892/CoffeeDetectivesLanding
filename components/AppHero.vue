@@ -10,7 +10,7 @@
             <h1 class="hero__title"><slot name="title" /></h1>
             <p class="hero__tagline"><slot name="tagline" /></p>
             <div class="hero__actions">
-              <AppButton to="#intro" title="Our Mission" class="button--solid">Our Mission</AppButton>
+              <AppButton to="#mission" title="Our Mission" class="button--alt">Our Mission</AppButton>
             </div>
           </div>
         </div>

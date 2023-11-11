@@ -14,7 +14,7 @@
       <template #tagline>{{ page.mtagline }}</template>
     </AppHero>
 
-    <AppSection>
+    <AppSection id="mission">
       <AppFeature class="feature--center">
         <template #title>{{ page.tagline }}</template>
         <template #tagline>{{ page.content }}</template>
@@ -29,8 +29,8 @@
       <div class="credit">Based on survey of 8 independent cafes in Newcastle upon Tyne</div>
     </AppSection>
 
-    <AppSection class="section--shade">
-
+    <AppSection id="perspectives">
+      
     </AppSection>
   </main>
 </template>
