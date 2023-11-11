@@ -1,46 +1,41 @@
 <template>
-  <article class="testimonial">
+  <div class="testimonial">
     <div class="testimonial__thumbnail">
       <img class="testimonial__thumbnail-image" src="/images/chris.png" alt="" />
     </div>
     <div class="testimonial__content">
+      <h2 class="testimonial__title"><slot name="title" /></h2>
       <slot name="content" />
-      <h3 class="testimonial__author">
-        <slot name="author" />
-      </h3>
-      <div class="testimonial__position">
-        <slot name="position" />
+      <div class="testimonial__author">
+        <img class="testimonial__author__signature" src="/images/signature.png" />
+        <p class="testimonial__author__name"><slot name="author" /></p>
       </div>
     </div>
-  </article>
+  </div>
 </template>
 
 <style scoped lang="scss">
   .testimonial {
+    background-color: $clr-shade;
+    border-radius: 25px;
     display: grid;
     gap: $gutter-half;
-    grid-template-columns: 1fr 3fr;
-    margin-top: $gutter;
-  }
-  .testimonial__thumbnail {
+    grid-template-columns: repeat(2, 1fr);
     overflow: hidden;
   }
-  .testimonial__thumbnail-image {
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
-  }
   .testimonial__content {
-    background: $clr-white;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: $gutter;
   }
   .testimonial__author {
-    line-height: 1;
-    margin: 1rem 0 0;
+    margin-top: $gutter-half;
   }
-  .testimonial__position {
-    margin: 0;
+  .testimonial__author__signature {
+    max-width: 220px;
+  }
+  .testimonial__author__name {
+    margin: 0.5rem 0 0 0;
   }
 </style>

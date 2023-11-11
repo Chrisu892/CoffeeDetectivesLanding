@@ -46,11 +46,31 @@
           <template #tagline>{{ offer.tagline }}</template>
           <template #content>{{ offer.description }}</template>
         </AppOffering>
+      </AppInner>
+    </AppSection>
 
+    <AppSection>
+      <AppInner>
+        <AppFeature class="feature--center">
+          <template #title>Our value proposition is simple</template>
+          <template #tagline>We want to create a go-to platform for coffee hobbyists and cafe owners.</template>
+        </AppFeature>
+        <AppTabs :content="[{
+          title: 'For coffee enthusiasts',
+          content: page.content3
+        }, {
+          title: 'For cafe owners',
+          content: page.content4
+        }]" />
+      </AppInner>
+    </AppSection>
+
+    <AppSection>
+      <AppInner>
         <AppTestimonial>
+          <template #title>{{ page.tagline3 }}</template>
           <template #content>{{ page.content3 }}</template>
           <template #author>Chris Prusakiewicz</template>
-          <template #position>Founder</template>
         </AppTestimonial>
       </AppInner>
     </AppSection>
