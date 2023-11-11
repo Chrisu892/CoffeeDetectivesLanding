@@ -1,8 +1,8 @@
 <template>
   <section class="section">
-    <div class="inner">
+    <AppInner>
       <slot />
-    </div>
+    </AppInner>
   </section>
 </template>
 

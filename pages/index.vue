@@ -1,4 +1,6 @@
 <script setup lang="ts">
+  import { PhMapPinLine } from "@phosphor-icons/vue"
+
   // Use page content in the head
   const { page } = useContent()
   useContentHead(page)
@@ -16,33 +18,41 @@
     </AppHero>
 
     <AppSection id="mission">
-      <AppFeature class="feature--center">
-        <template #title>{{ page.tagline }}</template>
-        <template #tagline>{{ page.content }}</template>
-      </AppFeature>
+      <AppInner>
+        <AppFeature class="feature--center" icon="PhMapPinLine">
+          <template #title>{{ page.tagline }}</template>
+          <template #tagline>{{ page.content }}</template>
+        </AppFeature>
 
-      <AppGrid class="grid--4">
-        <AppPortal v-for="stat, key in stats" :key="key" :class="{ 'portal-listing--large': key === 0, 'portal-listing--medium': key === 1 }">
-          <template #stat>{{ stat.number }}</template>
-          <template #blurb>{{ stat.title }}</template>
-        </AppPortal>
-      </AppGrid>
-      <div class="credit">Based on survey of 8 independent cafes in Newcastle upon Tyne</div>
+        <AppGrid class="grid--4">
+          <AppPortal v-for="stat, key in stats" :key="key" :class="{ 'portal-listing--large': key === 0, 'portal-listing--medium': key === 1 }">
+            <template #stat>{{ stat.number }}</template>
+            <template #blurb>{{ stat.title }}</template>
+          </AppPortal>
+        </AppGrid>
+        <div class="credit">Based on survey of 8 independent cafes in Newcastle upon Tyne</div>
+      </AppInner>
     </AppSection>
 
     <AppSection id="perspectives" class="section--shade">
-      <AppFeature class="feature--center">
-        <template #title>{{ page.tagline2 }}</template>
-        <template #tagline>{{ page.content2 }}</template>
-      </AppFeature>
+      <AppInner>
+        <AppFeature class="feature--center">
+          <template #title>{{ page.tagline2 }}</template>
+          <template #tagline>{{ page.content2 }}</template>
+        </AppFeature>
 
-      <AppGrid class="grid--3">
-        <AppCard v-for="offer, key in offering" :key="key">
+        <AppOffering v-for="offer, key in offering" :key="key" :offer="offer">
           <template #title>{{ offer.title }}</template>
-          <template #text>{{ offer.text }}</template>
+          <template #tagline>{{ offer.tagline }}</template>
           <template #content>{{ offer.description }}</template>
-        </AppCard>
-      </AppGrid>
+        </AppOffering>
+
+        <AppTestimonial>
+          <template #content>{{ page.content3 }}</template>
+          <template #author>Chris Prusakiewicz</template>
+          <template #position>Founder</template>
+        </AppTestimonial>
+      </AppInner>
     </AppSection>
   </main>
 </template>
