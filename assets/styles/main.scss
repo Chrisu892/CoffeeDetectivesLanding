@@ -38,6 +38,14 @@ a:hover, a:focus {
   }
 }
 
+button, input, textarea {
+  @include font-regular;
+  font: $font-body;
+}
+button {
+  cursor: pointer;
+}
+
 /*-------------------------*\
     #TYPOGRAPHY
 \*-------------------------*/

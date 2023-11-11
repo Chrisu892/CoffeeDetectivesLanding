@@ -12,7 +12,7 @@
 <style scoped lang="scss">
   .feature {
     margin: 0 auto $gutter;
-    max-width: 820px;
+    max-width: 880px;
 
     &--center {
       text-align: center;

@@ -4,6 +4,9 @@
       <div class="portal-listing__stat">
         <slot name="stat" />
       </div>
+      <h3 class="portal-listing__title">
+        <slot name="title" />
+      </h3>
       <p class=portal-listing__blurb>
         <slot name="blurb"></slot>
       </p>
@@ -55,10 +58,10 @@
     margin-top: 0.5rem;
     max-width: 380px;
   }
-  .portal-listing:nth-child(1) .portal-listing__blurb {
+  .portal-listing--large:nth-child(1) .portal-listing__blurb {
     @include font-large;
   }
-  .portal-listing:nth-child(2) .portal-listing__blurb {
+  .portal-listing--medium:nth-child(2) .portal-listing__blurb {
     @include font-medium;
   }
 </style>
