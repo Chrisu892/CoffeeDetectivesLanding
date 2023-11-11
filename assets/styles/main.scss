@@ -1,0 +1,61 @@
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+
+/*-------------------------*\
+    #TEMPLATE
+\*-------------------------*/
+
+body {
+  background-color: $clr-white;
+  font: $font-body;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-stroke: 0.45px rgba(0,0,0,0.1);
+}
+
+a {
+  color: $clr-secondary;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration-color: $clr-secondary;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 1420px;
+  padding: 0 3rem;
+
+  &--narrow {
+    max-width: 768px;
+  }
+}
+
+/*-------------------------*\
+    #TYPOGRAPHY
+\*-------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+  font: $font-header;
+  margin: 0 0 0.45em 0;
+}
+h1 {
+  @include font-xxl;
+}
+h2 {
+  @include font-xl;
+}
+h3 {
+  @include font-large;
+}
+.h4 {
+  @include font-medium;
+}
+.h5 {
+  @include font-regular;
+}
+h5 {
+  @include font-small;
+}

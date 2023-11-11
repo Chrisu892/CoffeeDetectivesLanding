@@ -1,0 +1,36 @@
+/*-------------------------*\
+    #TYPOGRAPHY
+\*-------------------------*/
+
+@mixin font-xxxxl {
+  font-size: clamp(2.4881rem, 2.2181rem + 1.35vw, 3.4331rem);
+  line-height: 1.2;
+}
+@mixin font-xxxl {
+  font-size: clamp(2.0738rem, 1.8814rem + 0.9616vw, 2.7469rem);
+  line-height: 1.2;
+}
+@mixin font-xxl {
+  font-size: clamp(1.7281rem, 1.594rem + 0.6705vw, 2.1975rem);
+  line-height: 1.3;
+}
+@mixin font-xl {
+  font-size: clamp(1.44rem, 1.3491rem + 0.4545vw, 1.7581rem);
+  line-height: 1.35;
+}
+@mixin font-large {
+  font-size: clamp(1.44rem, 1.3491rem + 0.4545vw, 1.7581rem);
+  line-height: 1.45;
+}
+@mixin font-medium {
+  font-size: clamp(1.2rem, 1.1411rem + 0.2946vw, 1.4063rem);
+}
+@mixin font-regular {
+  font-size: clamp(1rem, 0.9643rem + 0.1786vw, 1.125rem);
+}
+@mixin font-small {
+  font-size: clamp(0.8331rem, 0.814rem + 0.0955vw, 0.9rem);
+}
+@mixin font-xs {
+  font-size: clamp(0.6944rem, 0.6871rem + 0.0366vw, 0.72rem);
+}

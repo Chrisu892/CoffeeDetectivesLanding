@@ -1,0 +1,12 @@
+@import 'variables';
+@import 'mixins';
+
+/*-------------------------*\
+    #CREDIT
+\*-------------------------*/
+
+.credit {
+  @include font-small;
+  margin-top: 1rem;
+  text-align: right;
+}
