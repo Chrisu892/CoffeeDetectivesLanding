@@ -72,3 +72,9 @@ h3 {
 h5 {
   @include font-small;
 }
+
+[data-content-id] {
+  p:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}

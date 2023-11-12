@@ -19,7 +19,6 @@
     background-color: $clr-shade;
     border-radius: 25px;
     display: grid;
-    gap: $gutter-half;
     grid-template-columns: repeat(2, 1fr);
     overflow: hidden;
   }

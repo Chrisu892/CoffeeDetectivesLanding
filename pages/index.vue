@@ -5,9 +5,10 @@
   const { page } = useContent()
   useContentHead(page)
 
-  // Fetch data required for the homepage
+  // Fetch data required by the homepage
   const stats = await queryContent('stats').limit(4).find()
   const offering = await queryContent('offering').limit(6).find()
+  const proposition = await queryContent('proposition').limit(2).find()
 </script>
 
 <template>
@@ -52,24 +53,18 @@
     <AppSection>
       <AppInner>
         <AppFeature class="feature--center">
-          <template #title>Our value proposition is simple</template>
-          <template #tagline>We want to create a go-to platform for coffee hobbyists and cafe owners.</template>
+          <template #title>{{ page.tagline3 }}</template>
+          <template #tagline>{{ page.content3 }}</template>
         </AppFeature>
-        <AppTabs :content="[{
-          title: 'For coffee enthusiasts',
-          content: page.content3
-        }, {
-          title: 'For cafe owners',
-          content: page.content4
-        }]" />
+        <AppTabs :content="proposition" />
       </AppInner>
     </AppSection>
 
-    <AppSection>
+    <AppSection class="section--shade">
       <AppInner>
         <AppTestimonial>
-          <template #title>{{ page.tagline3 }}</template>
-          <template #content>{{ page.content3 }}</template>
+          <template #title>{{ page.tagline6 }}</template>
+          <template #content>{{ page.content6 }}</template>
           <template #author>Chris Prusakiewicz</template>
         </AppTestimonial>
       </AppInner>

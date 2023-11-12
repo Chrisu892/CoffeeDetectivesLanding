@@ -28,12 +28,13 @@
 <style scoped lang="scss">
   .tab-button {
     border: 0;
-    border-radius: 25px;
+    border-radius: 20px;
     flex: 1 0;
-    padding: 0.25rem 0.5rem;
+    padding: 0.775rem 1rem 0.875rem;
+    text-transform: uppercase;
 
     &--active {
-      background-color: $clr-white;
+      background-color: $clr-secondary;
     }
   }
 </style>

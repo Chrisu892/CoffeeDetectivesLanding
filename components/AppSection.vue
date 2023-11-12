@@ -1,9 +1,5 @@
 <template>
-  <section class="section">
-    <AppInner>
-      <slot />
-    </AppInner>
-  </section>
+  <section class="section"><slot /></section>
 </template>
 
 <style scoped lang="scss">

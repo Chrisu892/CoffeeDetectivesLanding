@@ -1,16 +1,7 @@
-<script lang="ts">
-  export default defineComponent({
-    props: {
-      content: {
-        type: String,
-        required: true,
-      }
-    }
-  })
-</script>
-
 <template>
-  <div class="tab-content">{{ content }}</div>
+  <div class="tab-content">
+    <slot name="content" />
+  </div>
 </template>
 
 <style scoped lang="scss">
