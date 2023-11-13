@@ -1,19 +1,27 @@
-<script lang="ts">
-  import { PhCheck } from "@phosphor-icons/vue"
+<script lang="ts" setup>
+  import { Splide, SplideSlide } from '@splidejs/vue-splide'
+  import '@splidejs/vue-splide/css'
 
+  const sliderOptions = {
+    type: 'loop',
+    rewind: false,
+    gap: '2rem',
+    perMove: 1,
+    perPage: 3,
+  }
+</script>
+
+<script lang="ts">
   export default defineComponent({
-    components: {
-      PhCheck,
-    },
     props: {
       content: {
-        type: Array,
+        type: Object,
         required: true,
       }
     },
     data() {
       return {
-        activeTab: 0,
+        activeTab: 'customer',
       }
     },
     methods: {
@@ -27,16 +35,17 @@
 <template>
   <div class="tabs">
     <div class="tabs__actions">
-      <AppTabButton v-for="tab, key in content" 
-        :key="key" :id="key" :title="tab.title" @toggle="handleToggle"
-        :class="{ 'tab-button--active': activeTab === key }" />
+      <AppTabButton :id="'customer'" title="For coffee hobbyists" @toggle="handleToggle" :class="{ 'tab-button--active': activeTab == 'customer' }" />
+      <AppTabButton :id="'business'" title="For cafe owners" @toggle="handleToggle" :class="{ 'tab-button--active': activeTab == 'business' }" />
     </div>
     <div class="tabs__content">
-      <AppTabContent v-for="tab, key in content" :key="key" :class="{ 'tab-content--active': activeTab === key }">
+      <AppTabContent v-for="benefits, key in content" :key="key" :class="{ 'tab-content--active': activeTab === key }">
         <template #content>
-          <div class="tabs__container">
-            <AppBenefit v-for="benefit, key in tab.benefits" :key="key" :benefit="benefit" />
-          </div>
+          <Splide :options="sliderOptions">
+            <SplideSlide v-for="benefit, key in benefits" :key="key">
+              <AppBenefit :benefit="benefit" />
+            </SplideSlide>
+          </Splide>
         </template>
       </AppTabContent>
     </div>

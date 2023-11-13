@@ -10,7 +10,7 @@
   export default defineComponent({
     props: {
       id: {
-        type: Number,
+        type: String,
         required: true
       },
       title: {

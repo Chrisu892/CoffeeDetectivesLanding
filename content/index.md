@@ -17,7 +17,7 @@ content2: Our guiding principles in the quest for great tasting coffee.
 tagline3: Our value proposition is simple
 content3: We want to create a go-to platform for coffee hobbyists and cafe owners.
 
-tagline4: For coffee hobbyists
+tagline4: A go-to platform for all coffee aficionados
 content4: We aim to create an online platform that we want to become a vibrant hub for coffee enthusiasts seeking unique, independent cafes that infuse artistry into every cup. By unveiling hidden gems beyond the usual haunts, our platform not only broadens your horizons but also empowers you to make informed and health-conscious choices. We recognise that boutique cafes struggle to vie with large chains that dominate prime locations and marketing channels. Despite the common use of Google Maps, social media, and review sites, these outlets often overlook the smaller establishments, favouring those who can afford prominence. Our mission is to level the playing field, providing discerning individuals with the insights needed to appreciate the distinct offerings of each cafe, all while fostering environmentally responsible decision-making.
 
 tagline5: For cafe owners

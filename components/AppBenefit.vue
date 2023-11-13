@@ -67,19 +67,19 @@
       <PhTrophy v-if="benefit.icon === 'PhTrophy'" />
     </div>
     <div class="benefit__title">{{ benefit.title }}</div>
-    <button class="benefit__button" type="button">Learn More</button>
+    <div class="benefit__content">{{ benefit.description }}</div>
   </div>
 </template>
 
 <style scoped lang="scss">
   .benefit {
-    align-items: center;
     border: solid 1px $clr-shade;
     border-radius: 25px;
     background: transparent;
     display: flex;
     flex-direction: column;
-    padding: $gutter 1.5rem;
+    height: 100%;
+    padding: $gutter $gutter-half $gutter-half $gutter-half;
   }
   .benefit__icon {
 
@@ -93,12 +93,5 @@
     font: $font-header;
     margin: 0.25rem 0 1rem;
     @include font-medium;
-  }
-  .benefit__button {
-    background-color: $clr-secondary;
-    border: 0;
-    border-radius: 25px;
-    line-height: 1;
-    padding: 0.45rem 0.95rem 0.6rem;
   }
 </style>

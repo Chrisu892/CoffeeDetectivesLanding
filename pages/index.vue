@@ -8,7 +8,10 @@
   // Fetch data required by the homepage
   const stats = await queryContent('stats').limit(4).find()
   const offering = await queryContent('offering').limit(6).find()
-  const proposition = await queryContent('proposition').limit(2).find()
+  const proposition = {
+    customer: await queryContent('proposition/customer').find(),
+    business: await queryContent('proposition/business').find()
+  }
 </script>
 
 <template>
@@ -57,6 +60,15 @@
           <template #tagline>{{ page.content3 }}</template>
         </AppFeature>
         <AppTabs :content="proposition" />
+      </AppInner>
+    </AppSection>
+
+    <AppSection class="section--shade">
+      <AppInner>
+        <AppFeature class="feature--center">
+          <template #title>{{ page.tagline4 }}</template>
+          <template #tagline>{{ page.content4 }}</template>
+        </AppFeature>
       </AppInner>
     </AppSection>
 
