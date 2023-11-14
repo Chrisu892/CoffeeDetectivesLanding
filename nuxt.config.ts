@@ -14,7 +14,9 @@ export default defineNuxtConfig({
   app: {
     head: {
       link: [
-        { rel: 'stylesheet', href: 'https://use.typekit.net/dye1syi.css' }
+        { rel: 'stylesheet', href: 'https://use.typekit.net/dye1syi.css' },
+        { rel: 'stylesheet', href: 'https://cdn-images.mailchimp.com/embedcode/classic-061523.css' },
+        { type: 'text/javascript', src: 'https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js' }
       ]
     }
   },

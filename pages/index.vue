@@ -73,18 +73,10 @@
       </AppInner>
     </AppSection>
 
-    <!-- <AppSection class="section--shade">
-      <AppInner>
-        <AppTestimonial>
-          <template #title>{{ page.tagline6 }}</template>
-          <template #content>{{ page.content6 }}</template>
-          <template #author>Chris Prusakiewicz</template>
-        </AppTestimonial>
-      </AppInner>
-    </AppSection> -->
-
     <AppSection id="newsletter" class="section--shade">
-
+      <AppInner>
+        <AppSubscribe />
+      </AppInner>
     </AppSection>
   </main>
 </template>
