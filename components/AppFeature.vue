@@ -28,11 +28,17 @@
 
 <style scoped lang="scss">
   .feature {
-    margin: 0 auto $gutter;
+    margin: 0 auto;
     max-width: 880px;
 
     &--center {
       text-align: center;
+    }
+    &--margin {
+      margin-bottom: $gutter;
+    }
+    &--margin-small {
+      margin-bottom: $gutter-half;
     }
 
     svg {

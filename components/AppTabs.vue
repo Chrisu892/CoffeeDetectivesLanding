@@ -1,6 +1,5 @@
 <script lang="ts" setup>
   import { Splide, SplideSlide } from '@splidejs/vue-splide'
-  import '@splidejs/vue-splide/css'
 
   const sliderOptions = {
     type: 'loop',

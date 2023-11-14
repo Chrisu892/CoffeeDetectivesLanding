@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { PhMapPinLine } from "@phosphor-icons/vue"
+  import '@splidejs/vue-splide/css'
 
   // Use page content in the head
   const { page } = useContent()
@@ -23,7 +23,7 @@
 
     <AppSection id="mission">
       <AppInner>
-        <AppFeature class="feature--center" icon="PhMapPinLine">
+        <AppFeature class="feature--center feature--margin" icon="PhMapPinLine">
           <template #title>{{ page.tagline }}</template>
           <template #tagline>{{ page.content }}</template>
         </AppFeature>
@@ -40,7 +40,7 @@
 
     <AppSection id="perspectives" class="section--shade">
       <AppInner class="inner--narrow">
-        <AppFeature class="feature--center">
+        <AppFeature class="feature--center feature--margin">
           <template #title>{{ page.tagline2 }}</template>
           <template #tagline>{{ page.content2 }}</template>
         </AppFeature>
@@ -55,7 +55,7 @@
 
     <AppSection>
       <AppInner>
-        <AppFeature class="feature--center">
+        <AppFeature class="feature--center feature--margin">
           <template #title>{{ page.tagline3 }}</template>
           <template #tagline>{{ page.content3 }}</template>
         </AppFeature>
@@ -65,7 +65,7 @@
 
     <AppSection class="section--gradient">
       <AppInner>
-        <AppFeature class="feature--center">
+        <AppFeature class="feature--center feature--margin">
           <template #title>{{ page.tagline4 }}</template>
           <template #tagline>{{ page.content4 }}</template>
         </AppFeature>
@@ -73,8 +73,12 @@
       </AppInner>
     </AppSection>
 
-    <AppSection id="newsletter" class="section--shade">
-      <AppInner>
+    <AppSection id="newsletter" class="section--sunburst">
+      <AppInner class="inner--narrow">
+        <AppFeature class="feature--center feature--margin-small">
+          <template #title>Join our mailing list</template>
+          <template #tagline>Add your email address to our mailing list and get notified about the latest news and updates from Coffee Detectives. Be the first to hear about the new features, beta access and more.</template>
+        </AppFeature>
         <AppSubscribe />
       </AppInner>
     </AppSection>

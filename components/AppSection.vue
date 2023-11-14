@@ -15,5 +15,8 @@
     &--gradient {
       background: linear-gradient(180deg, $clr-shade, $clr-white);
     }
+    &--sunburst {
+      background: url('/images/wintery-sunburst.svg') center center/cover no-repeat;
+    }
   }
 </style>
