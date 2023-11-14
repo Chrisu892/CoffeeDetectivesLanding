@@ -39,7 +39,7 @@
     </AppSection>
 
     <AppSection id="perspectives" class="section--shade">
-      <AppInner>
+      <AppInner class="inner--narrow">
         <AppFeature class="feature--center">
           <template #title>{{ page.tagline2 }}</template>
           <template #tagline>{{ page.content2 }}</template>
@@ -63,16 +63,17 @@
       </AppInner>
     </AppSection>
 
-    <AppSection class="section--shade">
+    <AppSection class="section--gradient">
       <AppInner>
         <AppFeature class="feature--center">
           <template #title>{{ page.tagline4 }}</template>
           <template #tagline>{{ page.content4 }}</template>
         </AppFeature>
+        <AppGallery />
       </AppInner>
     </AppSection>
 
-    <AppSection class="section--shade">
+    <!-- <AppSection class="section--shade">
       <AppInner>
         <AppTestimonial>
           <template #title>{{ page.tagline6 }}</template>
@@ -80,6 +81,10 @@
           <template #author>Chris Prusakiewicz</template>
         </AppTestimonial>
       </AppInner>
+    </AppSection> -->
+
+    <AppSection id="newsletter" class="section--shade">
+
     </AppSection>
   </main>
 </template>

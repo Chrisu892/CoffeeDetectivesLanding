@@ -12,5 +12,8 @@
     &--shade {
       background-color: $clr-shade;
     }
+    &--gradient {
+      background: linear-gradient(180deg, $clr-shade, $clr-white);
+    }
   }
 </style>
