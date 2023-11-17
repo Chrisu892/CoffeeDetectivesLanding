@@ -1,12 +1,14 @@
-<script lang="ts">
-  import { PhCoffee, PhHeart, PhEnvelope, PhWhatsappLogo } from '@phosphor-icons/vue'
+<script setup lang="ts">
+  import { defineComponent } from 'vue'
+  import { PhCoffee, PhHeart, PhEnvelope, PhWhatsappLogo, PhGithubLogo } from '@phosphor-icons/vue'
 
-  export default defineComponent({
+  defineComponent({
     components: {
       PhCoffee,
       PhHeart,
       PhEnvelope,
-      PhWhatsappLogo
+      PhWhatsappLogo,
+      PhGithubLogo,
     }
   })
 </script>
@@ -18,6 +20,7 @@
         <div class="socials">
           <a class="social-icon" href="mailto:chris.prusakiewicz@gmail.com" title="Send email to Chris" target="_blank"><PhEnvelope /></a>
           <a class="social-icon" href="https://wa.me/+447446840237" title="Send a message on Whatsapp (opens in new tab)" target="_blank"><PhWhatsappLogo /></a>
+          <a class="social-icon" href="https://github.com/Chrisu892/CoffeeDetectives2" title="Follow on Github (opens in new tab)" target="_blank"><PhGithubLogo /></a>
         </div>
       </div>
       <div class="footer__middle">

@@ -10,6 +10,7 @@
     border: 0;
     border-radius: 15px;
     color: $clr-secondary;
+    display: inline-block;
     padding: 0.85rem 1.5rem 1.125rem;
     line-height: 1;
     text-transform: uppercase;

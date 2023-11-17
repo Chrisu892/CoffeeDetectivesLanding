@@ -1,5 +1,7 @@
-<script lang="ts" setup>
-  import { Splide, SplideSlide, SplideTrack } from '@splidejs/vue-splide'
+<script setup lang="ts">
+  import { defineComponent } from 'vue'
+  import { Splide, SplideTrack, SplideSlide } from '@splidejs/vue-splide'
+  import { PhCamera, PhArrowLeft, PhArrowRight } from '@phosphor-icons/vue'
 
   const sliderOptions = {
     type: 'carousel',
@@ -10,13 +12,12 @@
   }
 
   const gallery = await queryContent('gallery').find()
-</script>
 
-<script lang="ts">
-  import { PhCamera, PhArrowLeft, PhArrowRight } from '@phosphor-icons/vue'
-
-  export default defineComponent({
+  defineComponent({
     components: {
+      Splide,
+      SplideTrack,
+      SplideSlide,
       PhCamera,
       PhArrowLeft,
       PhArrowRight,
@@ -88,16 +89,15 @@
   }
   .splide__arrow {
     background: $clr-secondary;
-    bottom: 20%;
     color: $clr-primary;
     opacity: 1;
-    top: initial;
+    top: 40%;
 
     &--prev {
-      left: -5%;
+      left: -10%;
     }
     &--next {
-      right: -5%;
+      right: -10%;
     }
 
     svg {

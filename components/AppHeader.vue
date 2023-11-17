@@ -32,17 +32,17 @@
 
 <style scoped lang="scss">
   .header {
-    background: rgba($clr-primary, 0.3);
+    background-color: rgba($clr-primary, 0.3);
     left: 0;
-    padding: $gutter-half 0;
+    padding: 1.25rem 0;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 100;
-    transition: background 350ms ease-in-out;
+    transition: background-color 350ms ease-in-out;
 
     &--active {
-      background: rgba($clr-white, 0.75);
+      background-color: rgba($clr-white, 0.75);
     }
   }
   .header__container {

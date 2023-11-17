@@ -1,12 +1,34 @@
-<script lang="ts" setup>
-  import { Splide, SplideSlide } from '@splidejs/vue-splide'
+<script setup lang="ts">
+  import { ref, defineProps } from 'vue'
+  import { Splide, SplideTrack, SplideSlide } from '@splidejs/vue-splide'
+  import { PhArrowLeft, PhArrowRight } from '@phosphor-icons/vue'
+
+  const props = defineProps({
+    content: {
+      type: Object,
+      required: true
+    }
+  })
+
+  defineComponent({
+    components: {
+      Splide,
+      SplideTrack,
+      SplideSlide,
+      PhArrowLeft,
+      PhArrowRight,
+    }
+  })
+
+  const activeTab = ref('customer')
 
   const sliderOptions = {
-    type: 'loop',
+    type: 'carousel',
     rewind: false,
-    gap: '2rem',
+    gap: '1rem',
     perMove: 1,
     perPage: 3,
+    pagination: false,
     breakpoints: {
       1024: {
         perPage: 2,
@@ -16,27 +38,10 @@
       }
     }
   }
-</script>
 
-<script lang="ts">
-  export default defineComponent({
-    props: {
-      content: {
-        type: Object,
-        required: true,
-      }
-    },
-    data() {
-      return {
-        activeTab: 'customer',
-      }
-    },
-    methods: {
-      handleToggle(id) {
-        this.activeTab = id
-      }
-    }
-  })
+  function handleToggle(id) {
+    activeTab.value = id
+  }
 </script>
 
 <template>
@@ -48,10 +53,21 @@
     <div class="tabs__content">
       <AppTabContent v-for="benefits, key in content" :key="key" :class="{ 'tab-content--active': activeTab === key }">
         <template #content>
-          <Splide :options="sliderOptions">
-            <SplideSlide v-for="benefit, key in benefits" :key="key">
-              <AppBenefit :benefit="benefit" />
-            </SplideSlide>
+          <Splide :options="sliderOptions" :has-track="false">
+            <SplideTrack>
+              <SplideSlide v-for="benefit, key in benefits" :key="key">
+                <AppBenefit :benefit="benefit" />
+              </SplideSlide>
+            </SplideTrack>
+
+            <div class="splide__arrows">
+              <button class="splide__arrow splide__arrow--prev">
+                <PhArrowLeft />
+              </button>
+              <button class="splide__arrow splide__arrow--next">
+                <PhArrowRight />
+              </button>
+            </div>
           </Splide>
         </template>
       </AppTabContent>
