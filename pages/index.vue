@@ -29,12 +29,15 @@
         </AppFeature>
 
         <AppGrid class="grid--4">
-          <AppPortal v-for="stat, key in stats" :key="key" :class="{ 'portal-listing--large': key === 0, 'portal-listing--medium': key === 1 }">
-            <template #stat>{{ stat.number }}</template>
-            <template #blurb>{{ stat.title }}</template>
-          </AppPortal>
+          <AppPortal
+            v-for="stat, key in stats"
+            :key="key" 
+            :class="{ 'portal-listing--large': key === 0, 'portal-listing--medium': key === 1 }"
+            :title="stat.title"
+            :text="stat.text"
+            :image="stat.image"
+          />
         </AppGrid>
-        <div class="credit">Based on survey of 8 independent cafes in Newcastle upon Tyne</div>
       </AppInner>
     </AppSection>
 

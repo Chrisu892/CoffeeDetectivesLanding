@@ -1,15 +1,28 @@
+<script setup lang="ts">
+  import { defineProps } from 'vue'
+
+  defineProps({
+    image: {
+      type: String,
+      default: null
+    },
+    title: {
+      type: String,
+      required: true
+    },
+    text: {
+      type: String,
+      required: true
+    }
+  })
+</script>
+
 <template>
   <article class="portal-listing">
+    <AppImage class="portal-listing__thumbnail" :src="image" />
     <div class="portal-listing__overlay">
-      <div class="portal-listing__stat">
-        <slot name="stat" />
-      </div>
-      <h3 class="portal-listing__title">
-        <slot name="title" />
-      </h3>
-      <p class=portal-listing__blurb>
-        <slot name="blurb"></slot>
-      </p>
+      <h3 class="portal-listing__title">{{ title }}</h3>
+      <p class="portal-listing__text">{{ text }}</p>
     </div>
   </article>
 </template>
@@ -79,8 +92,16 @@
       }
     }
   }
-
+  .portal-listing__thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   .portal-listing__overlay {
+    background: linear-gradient(180deg, rgba($clr-primary, 0.25) 50%, rgba($clr-primary, 0.85) 100%);
     bottom: 0;
     display: flex;
     flex-direction: column;
@@ -89,33 +110,17 @@
     padding: $gutter-half;
     position: absolute;
     right: 0;
+    z-index: 1;
+    color: $clr-white;
     top: 0;
+    text-shadow: 0 0 2px $clr-dark;
   }
-  .portal-listing__stat {
-    @include font-xxxl;
+  .portal-listing__title {
+    @include font-xl;
     font-weight: $bold-weight;
     line-height: 1;
   }
-  .portal-listing__blurb {
-    margin-top: 0.5rem;
-    max-width: 380px;
-  }
-  .portal-listing--large:nth-child(1) .portal-listing__blurb {
-    @include font-large;
-  }
-  .portal-listing--medium:nth-child(2) .portal-listing__blurb {
-    @include font-medium;
-  }
-
-  @media (max-width: 640px) {
-    .portal-listing__stat {
-      @include font-xxl;
-    }
-    .portal-listing--large:nth-child(1),
-    .portal-listing--medium:nth-child(2) {
-      .portal-listing__blurb {
-        @include font-medium;
-      }
-    }
+  .portal-listing__text {
+    max-width: 415px;
   }
 </style>
