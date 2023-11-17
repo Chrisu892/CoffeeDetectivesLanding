@@ -13,6 +13,7 @@
     padding: 0.85rem 1.5rem 1.125rem;
     line-height: 1;
     text-transform: uppercase;
+    transition: background-color 350ms ease-in-out, color 350ms ease-in-out;
 
     &--solid {
       background-color: $clr-white;

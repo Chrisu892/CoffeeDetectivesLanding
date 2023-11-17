@@ -18,4 +18,16 @@
       max-width: 768px;
     }
   }
+
+  @media (max-width: 600px) {
+    .inner {
+      padding: 0 2rem;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .inner {
+      padding: 0 1rem;
+    }
+  }
 </style>

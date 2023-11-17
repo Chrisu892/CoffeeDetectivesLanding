@@ -74,10 +74,25 @@
       height: 44px;
       width: 44px;
     }
+
+    @media (max-width: 600px) {
+      svg {
+        height: 33px;
+        width: 33px;
+      }
+    }
+
+    @media (max-width: 425px) {
+      display: none;
+    }
   }
   .offering-listing__content {
     flex: 1 0;
     padding: $gutter-half;
+
+    @media (max-width: 425px) {
+      padding: $gutter;
+    }
   }
   .offering-listing__action {
     padding: $gutter-half $gutter-half $gutter-half 0;
@@ -114,9 +129,17 @@
   }
   .offering-listing__drawer__content {
     padding: 0 $gutter-half $gutter-half 3rem;
+
+    @media (max-width: 425px) {
+      padding-left: $gutter-half;
+    }
   }
   .offering-listing__drawer__border {
     border-left: solid 2px $clr-primary;
     padding-left: 3rem;
+
+    @media (max-width: 425px) {
+      padding-left: $gutter-half;
+    }
   }
 </style>

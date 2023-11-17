@@ -21,7 +21,7 @@
       <template #tagline>{{ page.mtagline }}</template>
     </AppHero>
 
-    <AppSection id="mission">
+    <AppSection id="problem">
       <AppInner>
         <AppFeature class="feature--center feature--margin" icon="PhMapPinLine">
           <template #title>{{ page.tagline }}</template>
@@ -38,7 +38,7 @@
       </AppInner>
     </AppSection>
 
-    <AppSection id="perspectives" class="section--shade">
+    <AppSection id="about-us" class="section--shade">
       <AppInner class="inner--narrow">
         <AppFeature class="feature--center feature--margin">
           <template #title>{{ page.tagline2 }}</template>
@@ -53,7 +53,7 @@
       </AppInner>
     </AppSection>
 
-    <AppSection>
+    <AppSection id="solution">
       <AppInner>
         <AppFeature class="feature--center feature--margin">
           <template #title>{{ page.tagline3 }}</template>
@@ -63,7 +63,7 @@
       </AppInner>
     </AppSection>
 
-    <AppSection class="section--gradient">
+    <AppSection id="demo" class="section--gradient">
       <AppInner>
         <AppFeature class="feature--center feature--margin">
           <template #title>{{ page.tagline4 }}</template>
@@ -73,7 +73,7 @@
       </AppInner>
     </AppSection>
 
-    <AppSection id="newsletter" class="section--sunburst">
+    <AppSection id="subscribe" class="section--sunburst">
       <AppInner class="inner--narrow">
         <AppFeature class="feature--center feature--margin-small">
           <template #title>Join our mailing list</template>

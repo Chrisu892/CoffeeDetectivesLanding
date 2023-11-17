@@ -50,16 +50,12 @@
           </button>
         </div>
       </Splide>
-      <div class="gallery__credits">
-        <PhCamera /> <div><a href="https://unsplash.com/@sarahdorweiler?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sarah Dorweiler</a></div>
-      </div>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
   .gallery {
-    overflow: hidden;
     position: relative;
   }
   .gallery__background {
@@ -89,19 +85,11 @@
   .gallery__content {
     padding: $gutter-half;
     text-align: center;
-    margin-bottom: $gutter-half;
-  }
-  .gallery__credits {
-    @include font-small;
-    align-items: center;
-    display: flex;
-    gap: 0.5rem;
-    justify-content: center;
   }
   .splide__arrow {
-    background: $clr-primary;
-    bottom: 7.5%;
-    color: $clr-secondary;
+    background: $clr-secondary;
+    bottom: 20%;
+    color: $clr-primary;
     opacity: 1;
     top: initial;
 

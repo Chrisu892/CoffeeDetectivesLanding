@@ -29,6 +29,7 @@
   .tab-button {
     border: 0;
     border-radius: 20px;
+    color: $clr-primary;
     flex: 1 0;
     padding: 0.775rem 1rem 0.875rem;
     text-transform: uppercase;

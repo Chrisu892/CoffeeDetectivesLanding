@@ -1,19 +1,31 @@
+<script lang="ts">
+  import { PhCaretDown } from '@phosphor-icons/vue'
+
+  export default defineComponent({
+    components: {
+      PhCaretDown,
+    }
+  })
+</script>
+
 <template>
   <div class="video">
     <video class="video__source" preload="true" muted autoplay loop playsinline>
       <source src="/video/107566729.mp4" type="video/mp4" />
     </video>
-    <section class="hero">
+    <section id="hero" class="hero">
       <div class="hero__overlay">
-        <div class="inner">
+        <AppInner>
           <div class="hero__content">
             <h1 class="hero__title"><slot name="title" /></h1>
             <p class="hero__tagline"><slot name="tagline" /></p>
             <div class="hero__actions">
-              <AppButton to="#mission" title="Our Mission" class="button--alt">Our Mission</AppButton>
+              <a href="#problem" class="hero__scroller" title="Learn more about Coffee Detectives">
+                <PhCaretDown />
+              </a>
             </div>
           </div>
-        </div>
+        </AppInner>
       </div>
     </section>
   </div>
@@ -65,5 +77,14 @@
   }
   .hero__actions {
     margin-top: 1.75rem;
+  }
+  .hero__scroller {
+    align-items: center;
+    border: solid 1px $clr-secondary;
+    border-radius: 100%;
+    display: inline-flex;
+    height: 54px;
+    justify-content: center;
+    width: 54px;
   }
 </style>

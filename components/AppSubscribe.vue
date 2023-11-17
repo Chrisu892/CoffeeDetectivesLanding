@@ -25,6 +25,10 @@
       position: absolute;
       left: -1000px;
     }
+
+    @media (max-width: 425px) {
+      flex-direction: column;
+    }
   }
   .subscribe__field__input {
     border: solid 1px $clr-dark;
@@ -41,6 +45,10 @@
     padding: 0.5rem 1rem;
     line-height: 1;
     text-transform: uppercase;
+
+    @media (max-width: 425px) {
+      padding: 1rem;
+    }
   }
   .subscribe__note {
     @include font-small;

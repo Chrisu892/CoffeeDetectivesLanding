@@ -28,16 +28,6 @@ a:hover, a:focus {
   text-decoration-color: $clr-secondary;
 }
 
-.inner {
-  margin: 0 auto;
-  max-width: 1420px;
-  padding: 0 3rem;
-
-  &--narrow {
-    max-width: 768px;
-  }
-}
-
 button, input, textarea {
   @include font-regular;
   font: $font-body;

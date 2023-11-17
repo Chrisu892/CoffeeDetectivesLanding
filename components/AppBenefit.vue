@@ -80,6 +80,11 @@
     flex-direction: column;
     height: 100%;
     padding: $gutter $gutter-half $gutter-half $gutter-half;
+
+    @media (max-width: 640px) {
+      padding: $gutter $gutter-large;
+      text-align: center;
+    }
   }
   .benefit__icon {
 

@@ -7,6 +7,14 @@
     gap: '2rem',
     perMove: 1,
     perPage: 3,
+    breakpoints: {
+      1024: {
+        perPage: 2,
+      },
+      640: {
+        perPage: 1,
+      }
+    }
   }
 </script>
 
@@ -59,6 +67,10 @@
     flex-direction: row;
     gap: 0.25rem;
     padding: 0.25rem;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
   }
   .tabs__content {
     margin-top: $gutter-half;
