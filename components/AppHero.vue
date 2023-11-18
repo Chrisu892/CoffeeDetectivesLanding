@@ -86,5 +86,10 @@
     height: 54px;
     justify-content: center;
     width: 54px;
+    transition: transform 250ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 </style>

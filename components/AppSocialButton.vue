@@ -26,15 +26,19 @@
     border-radius: 100%;
     color: $clr-white;
     display: inline-flex;
-    height: 50px;
+    height: 52px;
     justify-content: center;
-    transition: border-color 350ms ease-in-out, color 350ms ease-in-out;
-    width: 50px;
+    transition: border-color 250ms ease-in-out, color 250ms ease-in-out, transform 250ms ease-in-out;
+    width: 52px;
 
     svg {
       display: inline-block;
       height: 30px;
       width: 30px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
     }
   }
 </style>

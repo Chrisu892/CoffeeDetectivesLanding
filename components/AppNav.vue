@@ -34,6 +34,9 @@
     gap: 1.5rem;
     justify-content: flex-end;
   }
+  .nav__item {
+    display: flex;
+  }
   .nav__link {
     color: $clr-white;
     display: block;
@@ -47,6 +50,10 @@
   .nav--rev .button--solid {
     background-color: $clr-primary;
     color: $clr-white;
+
+    &::before {
+      background-color: darken($clr-primary, 5%);
+    }
   }
   .nav--rev .social {
     border-color: $clr-primary;

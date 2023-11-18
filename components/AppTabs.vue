@@ -114,4 +114,15 @@
       right: -5%;
     }
   }
+
+  @media (max-width: 425px) {
+    .splide__arrow {
+      &--prev {
+        left: 1rem;
+      }
+      &--next {
+        right: 1rem;
+      }
+    }
+  }
 </style>
