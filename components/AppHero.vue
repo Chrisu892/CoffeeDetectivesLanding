@@ -10,7 +10,7 @@
 
 <template>
   <div class="video">
-    <video class="video__source" preload="true" muted autoplay loop playsinline>
+    <video class="video__source" preload="true" muted autoplay loop playsinline poster="/video/poster.jpg">
       <source src="/video/107566729.mp4" type="video/mp4" />
     </video>
     <section id="hero" class="hero">
