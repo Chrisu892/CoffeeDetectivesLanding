@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { defineComponent } from 'vue'
-  import { PhCoffee, PhHeart, PhEnvelope, PhWhatsappLogo, PhGithubLogo } from '@phosphor-icons/vue'
+  import { PhCoffee, PhHeart, PhEnvelope, PhWhatsappLogo, PhGithubLogo, PhInstagramLogo } from '@phosphor-icons/vue'
 
   defineComponent({
     components: {
@@ -9,6 +9,7 @@
       PhEnvelope,
       PhWhatsappLogo,
       PhGithubLogo,
+      PhInstagramLogo,
     }
   })
 </script>
@@ -22,6 +23,7 @@
           <div class="socials">
             <a class="social-icon" href="mailto:chris.prusakiewicz@gmail.com" title="Send email to Chris" target="_blank"><PhEnvelope /></a>
             <a class="social-icon" href="https://wa.me/+447446840237" title="Send a message on Whatsapp (opens in new tab)" target="_blank"><PhWhatsappLogo /></a>
+            <a class="social-icon" href="https://www.instagram.com/onesipcoffeereview" title="Follow One Sip Coffee Review on Instagram" target="_blank"><PhInstagramLogo /></a>
             <a class="social-icon" href="https://github.com/Chrisu892/CoffeeDetectives2" title="Follow on Github (opens in new tab)" target="_blank"><PhGithubLogo /></a>
           </div>
         </div>

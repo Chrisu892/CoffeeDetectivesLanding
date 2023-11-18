@@ -1,10 +1,11 @@
 <script setup lang="ts">
   import { defineComponent } from 'vue'
-  import { PhGithubLogo } from '@phosphor-icons/vue'
+  import { PhGithubLogo, PhInstagramLogo } from '@phosphor-icons/vue'
 
   defineComponent({
     components: {
-      PhGithubLogo
+      PhGithubLogo,
+      PhInstagramLogo,
     }
   })
 </script>
@@ -13,8 +14,8 @@
   <nav id="nav" class="nav">
     <ul class="nav__list">
       <li class="nav__item">
-        <AppSocialButton to="https://github.com/Chrisu892/CoffeeDetectives2" title="View on GitHub">
-          <PhGithubLogo />
+        <AppSocialButton to="https://www.instagram.com/onesipcoffeereview" title="Follow One Sip Coffee Review on Instagram (open in new tab)">
+          <PhInstagramLogo />
         </AppSocialButton>
       </li>
       <li class="nav__item">
