@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   css: ["@/assets/styles/main.scss"],
   vite: {
     css: {
@@ -22,9 +22,13 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxt/content',
+    'nuxt-gtag',
   ],
   content: {
     documentDriven: true
   },
-  ssr: true,
+  gtag: {
+    id: '406251817',
+    initialConsent: true
+  }
 })
