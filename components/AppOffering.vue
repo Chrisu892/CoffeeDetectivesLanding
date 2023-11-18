@@ -1,25 +1,24 @@
-<script lang="ts">
-  import { PhPlus, PhMountains, PhEye, PhFlag } from "@phosphor-icons/vue"
+<script setup lang="ts">
+  import { ref, defineComponent, defineProps } from 'vue'
+  import { PhPlus, PhMountains, PhEye, PhFlag } from '@phosphor-icons/vue'
 
-  export default defineComponent({
+  const props = defineProps({
+    offer: {
+      type: Object,
+      required: true
+    }
+  })
+
+  defineComponent({
     components: {
       PhPlus,
       PhMountains,
       PhEye,
-      PhFlag,
-    },
-    props: {
-      offer: {
-        type: Object,
-        required: true
-      }
-    },
-    data() {
-      return {
-        isActive: false,
-      }
+      PhFlag
     }
   })
+
+  const isActive = ref(false)
 </script>
 
 <template>
@@ -53,7 +52,6 @@
 <style scoped lang="scss">
   .offering-listing {
     background-color: $clr-white;
-    border-radius: 25px;
 
     &:not(:first-child) {
       margin-top: $gutter-half;

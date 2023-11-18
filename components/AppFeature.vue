@@ -1,15 +1,25 @@
-<script lang="ts">
+<script setup lang="ts">
+  import { defineComponent, defineProps } from 'vue'
   import { PhMapPinLine } from '@phosphor-icons/vue'
 
-  export default defineComponent({
+  defineProps({
+    icon: {
+      type: String,
+      default: null
+    },
+    title: {
+      type: String,
+      required: true
+    },
+    tagline: {
+      type: String,
+      required: true
+    }
+  })
+
+  defineComponent({
     components: {
       PhMapPinLine,
-    },
-    props: {
-      icon: {
-        type: String,
-        default: null
-      }
     }
   })
 </script>
@@ -17,12 +27,8 @@
 <template>
   <div class="feature">
     <PhMapPinLine v-if="icon && icon === 'PhMapPinLine'" />
-    <h2 class="feature__title">
-      <slot name="title" />
-    </h2>
-    <p class="feature__tagline">
-      <slot name="tagline" />
-    </p>
+    <h2 class="feature__title">{{ title }}</h2>
+    <p class="feature__tagline">{{ tagline }}</p>
   </div>
 </template>
 
@@ -39,6 +45,9 @@
     }
     &--margin-small {
       margin-bottom: $gutter-half;
+    }
+    &--rev {
+      color: $clr-white;
     }
 
     svg {

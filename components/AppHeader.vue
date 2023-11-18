@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
   import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 
   const isTransparent = ref(true)
@@ -24,7 +24,7 @@
 <template>
   <header id="header" class="header" :class="{ 'header--active': !isTransparent }">
     <AppInner class="header__container">
-      <AppLogo />
+      <AppLogo :class="{ 'logo--rev': !isTransparent }" />
       <AppNav :class="{ 'nav--rev': !isTransparent }" />
     </AppInner>
   </header>

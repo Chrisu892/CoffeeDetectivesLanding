@@ -18,5 +18,11 @@
     &--sunburst {
       background: url('/images/wintery-sunburst.svg') center center/cover no-repeat;
     }
+    &--primary {
+      background: linear-gradient(135deg, lighten($clr-primary, 5%), $clr-primary);
+    }
+    &--pattern {
+      @include rounded-plus-connected;
+    }
   }
 </style>

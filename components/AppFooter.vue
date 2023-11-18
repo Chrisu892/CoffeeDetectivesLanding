@@ -15,19 +15,24 @@
 
 <template>
   <footer id="footer" class="footer">
-    <AppInner>
-      <div class="footer__upper">
-        <div class="socials">
-          <a class="social-icon" href="mailto:chris.prusakiewicz@gmail.com" title="Send email to Chris" target="_blank"><PhEnvelope /></a>
-          <a class="social-icon" href="https://wa.me/+447446840237" title="Send a message on Whatsapp (opens in new tab)" target="_blank"><PhWhatsappLogo /></a>
-          <a class="social-icon" href="https://github.com/Chrisu892/CoffeeDetectives2" title="Follow on Github (opens in new tab)" target="_blank"><PhGithubLogo /></a>
+    <AppImage src="/images/coffee-beans.jpg" class="footer__background" />
+    <div class="footer__overlay">
+      <AppInner>
+        <div class="footer__upper">
+          <div class="socials">
+            <a class="social-icon" href="mailto:chris.prusakiewicz@gmail.com" title="Send email to Chris" target="_blank"><PhEnvelope /></a>
+            <a class="social-icon" href="https://wa.me/+447446840237" title="Send a message on Whatsapp (opens in new tab)" target="_blank"><PhWhatsappLogo /></a>
+            <a class="social-icon" href="https://github.com/Chrisu892/CoffeeDetectives2" title="Follow on Github (opens in new tab)" target="_blank"><PhGithubLogo /></a>
+          </div>
         </div>
-      </div>
-      <div class="footer__middle">
-        Created with lots of <PhHeart weight="fill" /> and way to much <PhCoffee weight="fill" /> by <a href="https://www.chrisprusakiewicz.com/" title="Visit author's website (opens in new tab)" target="_blank">Chris Prusakiewicz</a>
-      </div>
-      <div class="footer__lower">&copy; 2023 Coffee Detectives.</div>
-    </AppInner>
+        <div class="footer__middle">
+          Created with lots of <PhHeart weight="fill" /> and way to much <PhCoffee weight="fill" /> by <a href="https://www.chrisprusakiewicz.com/" title="Visit author's website (opens in new tab)" target="_blank">Chris Prusakiewicz</a>
+        </div>
+        <div class="footer__lower">
+          &copy; 2023 Coffee Detectives. Photography provided by <a href="https://www.unsplash.com" title="Visit Unsplash - a free photography for everyone (open in new tab)" target="_blank">Unsplash</a>. Icons provided by <a href="https://phosphoricons.com/" title="Visit Phosphor - a flexible icon family (open in new tab)" target="_blank">Phosphor</a>.
+        </div>
+      </AppInner>
+    </div>
   </footer>
 </template>
 
@@ -35,7 +40,6 @@
   .footer {
     background-color: $clr-primary;
     color: $clr-white;
-    padding: $gutter-half 0;
     position: relative;
     text-align: center;
     z-index: 1;
@@ -49,6 +53,23 @@
     svg {
       transform: translateY(3px);
     }
+  }
+  .footer__lower {
+    @include font-small;
+  }
+  .footer__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .footer__overlay {
+    background: linear-gradient(180deg, $clr-primary 0%, rgba($clr-primary, 0.65) 100%);
+    padding: $gutter 0;
+    position: relative;
+    z-index: 1;
   }
 
   .socials {

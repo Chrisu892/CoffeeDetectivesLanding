@@ -23,10 +23,7 @@
 
     <AppSection id="problem">
       <AppInner>
-        <AppFeature class="feature--center feature--margin" icon="PhMapPinLine">
-          <template #title>{{ page.tagline }}</template>
-          <template #tagline>{{ page.content }}</template>
-        </AppFeature>
+        <AppFeature class="feature--center feature--margin" icon="PhMapPinLine" :title="page.tagline" :tagline="page.content" />
 
         <AppGrid class="grid--4">
           <AppPortal
@@ -41,12 +38,9 @@
       </AppInner>
     </AppSection>
 
-    <AppSection id="about-us" class="section--shade">
+    <AppSection id="about-us" class="section--pattern">
       <AppInner class="inner--narrow">
-        <AppFeature class="feature--center feature--margin">
-          <template #title>{{ page.tagline2 }}</template>
-          <template #tagline>{{ page.content2 }}</template>
-        </AppFeature>
+        <AppFeature class="feature--center feature--margin feature--rev" :title="page.tagline2" :tagline="page.content2" />
 
         <AppOffering v-for="offer, key in offering" :key="key" :offer="offer">
           <template #title>{{ offer.title }}</template>
@@ -58,30 +52,21 @@
 
     <AppSection id="solution">
       <AppInner>
-        <AppFeature class="feature--center feature--margin">
-          <template #title>{{ page.tagline3 }}</template>
-          <template #tagline>{{ page.content3 }}</template>
-        </AppFeature>
-        <AppTabs :content="proposition" />
+        <AppFeature class="feature--center feature--margin" :title="page.tagline3" :tagline="page.content3" />
       </AppInner>
+      <AppTabs :content="proposition" />
     </AppSection>
 
     <AppSection id="demo" class="section--gradient">
       <AppInner>
-        <AppFeature class="feature--center feature--margin">
-          <template #title>{{ page.tagline4 }}</template>
-          <template #tagline>{{ page.content4 }}</template>
-        </AppFeature>
+        <AppFeature class="feature--center feature--margin" :title="page.tagline4" :tagline="page.content4" />
         <AppGallery />
       </AppInner>
     </AppSection>
 
     <AppSection id="subscribe" class="section--sunburst">
       <AppInner class="inner--narrow">
-        <AppFeature class="feature--center feature--margin-small">
-          <template #title>Join our mailing list</template>
-          <template #tagline>Add your email address to our mailing list and get notified about the latest news and updates from Coffee Detectives. Be the first to hear about the new features, beta access and more.</template>
-        </AppFeature>
+        <AppFeature class="feature--center feature--margin-small" title="Join our mailing list" tagline="Add your email address to our mailing list and get notified about the latest news and updates from Coffee Detectives. Be the first to hear about the new features, beta access and more." />
         <AppSubscribe />
       </AppInner>
     </AppSection>

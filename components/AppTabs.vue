@@ -3,7 +3,7 @@
   import { Splide, SplideTrack, SplideSlide } from '@splidejs/vue-splide'
   import { PhArrowLeft, PhArrowRight } from '@phosphor-icons/vue'
 
-  const props = defineProps({
+  defineProps({
     content: {
       type: Object,
       required: true
@@ -46,11 +46,14 @@
 
 <template>
   <div class="tabs">
-    <div class="tabs__actions">
-      <AppTabButton :id="'customer'" title="For coffee hobbyists" @toggle="handleToggle" :class="{ 'tab-button--active': activeTab == 'customer' }" />
-      <AppTabButton :id="'business'" title="For cafe owners" @toggle="handleToggle" :class="{ 'tab-button--active': activeTab == 'business' }" />
-    </div>
+    <AppInner class="inner--narrow">
+      <div class="tabs__actions">
+        <AppTabButton :id="'customer'" title="For coffee hobbyists" @toggle="handleToggle" :class="{ 'tab-button--active': activeTab == 'customer' }" />
+        <AppTabButton :id="'business'" title="For cafe owners" @toggle="handleToggle" :class="{ 'tab-button--active': activeTab == 'business' }" />
+      </div>
+    </AppInner>
     <div class="tabs__content">
+      <AppInner class="inner--narrow">
       <AppTabContent v-for="benefits, key in content" :key="key" :class="{ 'tab-content--active': activeTab === key }">
         <template #content>
           <Splide :options="sliderOptions" :has-track="false">
@@ -71,6 +74,7 @@
           </Splide>
         </template>
       </AppTabContent>
+    </AppInner>
     </div>
   </div>
 </template>
@@ -78,7 +82,6 @@
 <style scoped lang="scss">
   .tabs__actions {
     background-color: $clr-shade;
-    border-radius: 25px;
     display: flex;
     flex-direction: row;
     gap: 0.25rem;
@@ -97,5 +100,18 @@
     display: grid;
     gap: $gutter-half;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .splide__arrow {
+    background: $clr-secondary;
+    color: $clr-primary;
+
+    &--prev {
+      left: -5%;
+      transform: translateY(-50%) scale(-1);
+    }
+    &--next {
+      right: -5%;
+    }
   }
 </style>

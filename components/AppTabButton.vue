@@ -1,24 +1,22 @@
 <script setup lang="ts">
+  import { defineEmits, defineProps } from 'vue'
+
   const emit = defineEmits(['toggle'])
+
+  defineProps({
+    id: {
+      type: String,
+      required: true
+    },
+    title: {
+      type: String,
+      required: true
+    }
+  })
 
   function toggle(id) {
     emit('toggle', id)
   }
-</script>
-
-<script lang="ts">
-  export default defineComponent({
-    props: {
-      id: {
-        type: String,
-        required: true
-      },
-      title: {
-        type: String,
-        required: true
-      }
-    }
-  })
 </script>
 
 <template>
@@ -28,7 +26,6 @@
 <style scoped lang="scss">
   .tab-button {
     border: 0;
-    border-radius: 20px;
     color: $clr-primary;
     flex: 1 0;
     padding: 0.775rem 1rem 0.875rem;
@@ -36,6 +33,7 @@
 
     &--active {
       background-color: $clr-secondary;
+      font-weight: $bold-weight;
     }
   }
 </style>

@@ -74,12 +74,12 @@
 <style scoped lang="scss">
   .benefit {
     border: solid 1px $clr-shade;
-    border-radius: 25px;
     background: transparent;
     display: flex;
     flex-direction: column;
     height: 100%;
     padding: $gutter $gutter-half $gutter-half $gutter-half;
+    text-align: center;
 
     @media (max-width: 640px) {
       padding: $gutter $gutter-large;
@@ -87,6 +87,7 @@
     }
   }
   .benefit__icon {
+    color: $clr-primary;
 
     svg {
       display: inline-block;
