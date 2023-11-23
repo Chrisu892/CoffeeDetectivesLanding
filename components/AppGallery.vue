@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import { defineComponent } from 'vue'
   import { Splide, SplideTrack, SplideSlide } from '@splidejs/vue-splide'
   import { PhCamera, PhArrowLeft, PhArrowRight } from '@phosphor-icons/vue'
 

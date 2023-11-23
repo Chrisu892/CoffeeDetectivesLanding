@@ -23,7 +23,7 @@
 
     <AppSection id="problem">
       <AppInner>
-        <AppFeature class="feature--center feature--margin" icon="PhMapPinLine" :title="page.tagline" :tagline="page.content" />
+        <AppFeature class="feature--center feature--margin" icon="map.png" :title="page.tagline" :tagline="page.content" />
 
         <AppGrid class="grid--4">
           <AppPortal

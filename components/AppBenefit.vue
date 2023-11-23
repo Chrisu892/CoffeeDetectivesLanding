@@ -74,6 +74,7 @@
 <style scoped lang="scss">
   .benefit {
     border: solid 1px $clr-shade;
+    border-radius: $border-radius;
     background: transparent;
     display: flex;
     flex-direction: column;

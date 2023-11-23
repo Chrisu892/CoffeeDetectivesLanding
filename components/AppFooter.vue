@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import { defineComponent } from 'vue'
   import { PhCoffee, PhHeart, PhEnvelope, PhWhatsappLogo, PhGithubLogo, PhInstagramLogo } from '@phosphor-icons/vue'
 
   defineComponent({

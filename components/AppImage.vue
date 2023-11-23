@@ -1,10 +1,8 @@
-<script lang="ts">
-  export default defineComponent({
-    props: {
-      src: {
-        type: String,
-        required: true
-      }
+<script setup lang="ts">
+  defineProps({
+    src: {
+      type: String,
+      required: true
     }
   })
 </script>

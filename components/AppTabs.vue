@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { ref, defineProps } from 'vue'
+  import { ref } from 'vue'
   import { Splide, SplideTrack, SplideSlide } from '@splidejs/vue-splide'
   import { PhArrowLeft, PhArrowRight } from '@phosphor-icons/vue'
 
@@ -81,6 +81,7 @@
 
 <style scoped lang="scss">
   .tabs__actions {
+    border-radius: $border-radius;
     background-color: $clr-shade;
     display: flex;
     flex-direction: row;

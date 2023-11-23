@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import { defineComponent, defineProps } from 'vue'
   import { PhMapPinLine } from '@phosphor-icons/vue'
 
   defineProps({
@@ -27,6 +26,7 @@
 <template>
   <div class="feature">
     <PhMapPinLine v-if="icon && icon === 'PhMapPinLine'" />
+    <AppImage v-if="icon && icon === 'map.png'" src="/images/map.png" class="feature__image" />
     <h2 class="feature__title">{{ title }}</h2>
     <p class="feature__tagline">{{ tagline }}</p>
   </div>
@@ -55,5 +55,9 @@
       margin-bottom: 0.5rem;
       width: 44px;
     }
+  }
+  .feature__image {
+    margin: 0 auto 1rem;
+    max-width: 130px;
   }
 </style>

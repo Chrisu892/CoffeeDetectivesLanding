@@ -37,6 +37,7 @@
 <style scoped lang="scss">
   .card-listing {
     background-color: $clr-white;
+    border-radius: $border-radius;
     padding: $gutter-half;
   }
   .card-listing__action {

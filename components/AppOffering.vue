@@ -1,8 +1,8 @@
 <script setup lang="ts">
-  import { ref, defineComponent, defineProps } from 'vue'
+  import { ref } from 'vue'
   import { PhPlus, PhMountains, PhEye, PhFlag } from '@phosphor-icons/vue'
 
-  const props = defineProps({
+  defineProps({
     offer: {
       type: Object,
       required: true
@@ -52,6 +52,7 @@
 <style scoped lang="scss">
   .offering-listing {
     background-color: $clr-white;
+    border-radius: $border-radius;
 
     &:not(:first-child) {
       margin-top: $gutter-half;

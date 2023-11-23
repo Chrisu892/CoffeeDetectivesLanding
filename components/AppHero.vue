@@ -46,6 +46,10 @@
     transform: translate(-50%, -50%);
     position: fixed;
     z-index: 2;
+
+    @media (max-width: 768px) {
+      position: absolute;
+    }
   }
   .hero {
     position: relative;
