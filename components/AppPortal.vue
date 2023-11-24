@@ -28,7 +28,6 @@
 <style scoped lang="scss">
   .portal-listing {
     background-color: $clr-shade;
-    border: solid 0.5rem $clr-primary;
     border-radius: $border-radius;
     overflow: hidden;
     padding-top: 75%;
