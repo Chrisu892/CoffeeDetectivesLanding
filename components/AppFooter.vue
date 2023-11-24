@@ -18,6 +18,7 @@
     <AppImage src="/images/coffee-beans.jpg" class="footer__background" />
     <div class="footer__overlay">
       <AppInner>
+        <AppImage class="footer__logo" src="/images/coffeedetectives-logo--rev.png" />
         <div class="footer__upper">
           <div class="socials">
             <a class="social-icon" href="mailto:chris.prusakiewicz@gmail.com" title="Send email to Chris" target="_blank"><PhEnvelope /></a>
@@ -71,6 +72,10 @@
     padding: $gutter 0;
     position: relative;
     z-index: 1;
+  }
+  .footer__logo {
+    margin: 0 auto $gutter-half;
+    max-width: 270px;
   }
 
   .socials {
