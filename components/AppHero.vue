@@ -11,7 +11,9 @@
 <template>
   <div class="video">
     <video class="video__source" preload="true" muted autoplay loop playsinline poster="/video/poster.jpg">
-      <source src="/video/107566729.mp4" type="video/mp4" />
+      <source src="/video/hero-video.webm" type="video/webm" />
+      <source src="/video/hero-video.mp4" type="video/mp4" />
+      Your web browser does not support video tag. Please consider upgrading your web browser.
     </video>
     <section id="hero" class="hero">
       <div class="hero__overlay">

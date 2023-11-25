@@ -47,6 +47,8 @@
           <template #tagline>{{ offer.tagline }}</template>
           <template #content>{{ offer.description }}</template>
         </AppOffering>
+
+        <!-- <AppLoom /> -->
       </AppInner>
     </AppSection>
 

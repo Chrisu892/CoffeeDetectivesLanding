@@ -21,10 +21,10 @@
         <AppImage class="footer__logo" src="/images/coffeedetectives-logo--rev.png" />
         <div class="footer__upper">
           <div class="socials">
-            <a class="social-icon" href="mailto:chris.prusakiewicz@gmail.com" title="Send email to Chris" target="_blank"><PhEnvelope /></a>
-            <a class="social-icon" href="https://wa.me/+447446840237" title="Send a message on Whatsapp (opens in new tab)" target="_blank"><PhWhatsappLogo /></a>
-            <a class="social-icon" href="https://www.instagram.com/onesipcoffeereview" title="Follow One Sip Coffee Review on Instagram" target="_blank"><PhInstagramLogo /></a>
-            <a class="social-icon" href="https://github.com/Chrisu892/CoffeeDetectives2" title="Follow on Github (opens in new tab)" target="_blank"><PhGithubLogo /></a>
+            <AppSocialButton name="Email" class="social--email" to="mailto:chris.prusakiewicz@gmail.com" title="Send email to Chris (open in new tab)" />
+            <AppSocialButton name="WhatsApp" class="social--whatsapp" to="https://wa.me/+447446840237" title="Send a message on WhatsApp (open in new tab)" />
+            <AppSocialButton name="Instagram" class="social--instagram" to="https://www.instagram.com/onesipcoffeereview" title="Follow Coffee Detectives (One Sip Coffee Review) on Instagram (opens in new tab)" />
+            <AppSocialButton name="GitHub" class="social--github" to="https://github.com/Chrisu892/CoffeeDetectives2" title="Follow on GitHub (opens in new tab)" />
           </div>
         </div>
         <div class="footer__middle">
@@ -82,20 +82,5 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
-  }
-  .social-icon {
-    align-items: center;
-    background-color: $clr-secondary;
-    border-radius: 100%;
-    color: $clr-primary;
-    display: inline-flex;
-    height: 44px;
-    justify-content: center;
-    width: 44px;
-
-    svg {
-      height: 24px;
-      width: 24px;
-    }
   }
 </style>

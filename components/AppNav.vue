@@ -13,9 +13,7 @@
   <nav id="nav" class="nav">
     <ul class="nav__list">
       <li class="nav__item">
-        <AppSocialButton to="https://www.instagram.com/onesipcoffeereview" title="Follow One Sip Coffee Review on Instagram (open in new tab)">
-          <PhInstagramLogo />
-        </AppSocialButton>
+        <AppSocialButton name="Instagram" class="social--instagram" to="https://www.instagram.com/onesipcoffeereview" title="Follow One Sip Coffee Review on Instagram (open in new tab)" />
       </li>
       <li class="nav__item">
         <AppButton class="button--solid" to="#subscribe" title="Sign up to our mailing list">
